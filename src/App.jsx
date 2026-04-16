@@ -3,6 +3,7 @@ import { useEffect } from "react"
 import ProfilePanel from "./components/ProfilePanel"
 import ProjectsGrid from "./components/ProjectsGrid"
 import NotificationBell from "./components/NotificationBell"
+import {Sun, Moon} from 'lucide-react'
 import "./styles/App.css"
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
     <div className="appContainer">
       <div className="topBar">
         <button className="themeToggle" onClick={toggleTheme}>
-          {theme === "light" ? "🌙" : "☀️"}
+          {theme === "light" ? <Moon /> : <Sun color="yellow" />}
         </button>
         <NotificationBell isOpen={notifOpen} setIsOpen={setNotifOpen} />
       </div>

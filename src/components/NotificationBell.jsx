@@ -1,5 +1,6 @@
 import { useRef, useEffect } from "react"
 import "../styles/NotificationBell.css"
+import { Bell } from 'lucide-react';
 
 const notifications = [
   { id: 1, text: "A recruiter saved your profile " },
@@ -25,7 +26,7 @@ function NotificationBell({ isOpen, setIsOpen }) {
   return (
     <div className="bellWrapper" ref={ref}>
       <button className="bellBtn" onClick={() => setIsOpen(!isOpen)}>
-        🔔
+        <Bell color="red" />
         <span className="bellBadge">5</span>
       </button>
 

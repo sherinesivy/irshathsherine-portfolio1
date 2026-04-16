@@ -14,9 +14,7 @@
   background: var(--bg-card);
   transition: filter 0.2s;
 }
-.comingSoonCard:hover {
-  background-color: #ffffff !important;
-}
+
 
 .comingSoonInner {
   background: var(--bg-card);

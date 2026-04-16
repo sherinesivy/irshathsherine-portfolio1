@@ -1,6 +1,7 @@
 import { useState } from "react"
 import "../styles/ProfilePanel.css"
 import { GitBranch, Mail, Triangle, MessageCircleMore, Phone} from 'lucide-react';
+import profilepic from "../assets/sherine pfp.png";
 
 function ProfilePanel() {
   const [copied, setCopied] = useState(false)
@@ -33,7 +34,7 @@ function ProfilePanel() {
       {/* Profile Pic */}
       <div className="profilePicWrapper">
         <img
-          src="/profile.jpg"
+          src={profilepic}
           alt="Sherine"
           className="profilePic"
           onError={(e) => e.target.style.display = "none"}
