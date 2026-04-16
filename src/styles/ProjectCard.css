@@ -1,0 +1,269 @@
+.projectCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.projectCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cardImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--bg-secondary);
+  overflow: hidden;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardImagePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--bg-secondary);
+}
+
+.placeholderEmoji {
+  font-size: 32px;
+}
+
+.placeholderEmoji.large {
+  font-size: 52px;
+}
+
+.placeholderText {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.slideBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(128, 128, 128, 0.4);
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background 0.2s;
+}
+
+.slideBtn:hover {
+  background: rgba(128, 128, 128, 0.7);
+}
+
+.slideBtn.prev { left: 8px; }
+.slideBtn.next { right: 8px; }
+
+.slideDots {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 4px;
+}
+
+.slideDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transition: background 0.2s;
+}
+
+.slideDot.active {
+  background: #ffffff;
+}
+
+.cardFooter {
+  padding: 10px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cardTitleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.cardDate {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.cardTechRow {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.techPill {
+  background: var(--pill-bg);
+  border-radius: 20px;
+  padding: 3px 9px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--pill-text);
+}
+
+.techPill.muted {
+  color: var(--text-muted);
+}
+
+.cardOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.cardModal {
+  background: var(--bg-card);
+  border-radius: 16px;
+  width: 90vw;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.cardModalClose {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: rgba(128, 128, 128, 0.3);
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--text);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalImageWrapper {
+  width: 100%;
+  max-height: 500px;
+  background: var(--bg-secondary);
+  overflow: hidden;
+  position: relative;
+}
+
+.modalImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.modalImagePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-secondary);
+}
+
+.modalInfo {
+  padding: 20px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modalTitleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.modalDate {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.modalDescription {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.modalTechRow {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.modalLinks {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.modalLink {
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.modalLink:hover {
+  opacity: 0.8;
+}
+
+.modalLink.github {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.modalLink.vercel {
+  background: var(--bg-input);
+  color: var(--text);
+}
+
