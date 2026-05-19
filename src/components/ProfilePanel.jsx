@@ -43,7 +43,7 @@ function ProfilePanel() {
 
       {/* Name + Verified */}
       <div className="profileName">
-        <span>Irshath Sherine S S</span>
+        <span>Irshathsherine S S</span>
         <span className="verifiedBadge">✔</span>
       </div>
 
